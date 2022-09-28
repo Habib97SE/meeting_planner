@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="flex-item logo">
+                    <a href="#">Meeting Planner</a>
+                </div>
+                <div class="flex-item menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Meetings</a></li>
+                        <li><a href="{% url 'room'  %}">Rooms</a></li>
+                        <li><a href="#">Participants</a></li>
+                        <li><a href="#">Organizers</a></li>
+                    </ul>
+                </div>
+                <div class="flex-item">
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <ul>
+                <li><strong>Meeting Title:</strong> {{ meeting.title }}</li>
+                <li><strong>Meeting Date:</strong> {{ meeting.date }}</li>
+                <li><strong>Meeting Time:</strong> {{ meeting.time }}</li>
+                <li><strong>Meeting Location:</strong> {{ meeting.location }}</li>
+                <li><strong>Meeting Agenda:</strong> {{ meeting.agenda }}</li>
+                <li><strong>Room: </strong> {{ meeting.room }} </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="flex-item">
+                <p>Meeting Planner</p>
+            </div>
+            <div class="flex-item">
+                <p>© 2021 sMeeting Planner</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+{% extends './base.html' %}
+
+{% block page_title %} {{ title }} {% endblock page_title %}
+
+{% block content %}
+
+<main>
+        <section>
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item">
+                        <h3>Edit Room</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item">
+                        <form action="#" method="post">
+                            <div class="form-control">
+                                <fieldset>
+                                    <legend>
+                                        <label for="name">Name</label>
+                                    </legend>
+                                    <input type="text" value="Room 1">
+                                </fieldset>
+                            </div>
+                            <div class="form-control">
+                                <fieldset>
+                                    <legend>
+                                        <label for="capacity">Capacity</label>
+                                    </legend>
+                                    <input type="number" value="10">
+                                </fieldset>
+                            </div>
+                            <div class="form-control">
+                                <fieldset>
+                                    <legend>
+                                        <label for="location">Location: </label>
+                                    </legend>
+                                    <input type="text" value="10 Ave NY">
+                                </fieldset>
+                            </div>
+                            <div class="form-control">
+                                <fieldset>
+                                    <div class="form-control">
+                                        <fieldset>
+                                            <legend>
+                                                <label for="projector">Projector: </label>
+                                            </legend>
+                                            <input type="checkbox" checked>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-control">
+                                        <fieldset>
+                                            <legend>
+                                                <label for="whiteboard">Whiteboard: </label>
+                                            </legend>
+                                            <input type="checkbox" checked>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-control">
+                                        <fieldset>
+                                            <legend>
+                                                <label for="tv">TV: </label>
+                                            </legend>
+                                            <input type="checkbox" checked>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-control">
+                                        <fieldset>
+                                            <legend>
+                                                <label for="flipchart">Flipchart</label>
+                                            </legend>
+                                            <input type="checkbox" checked>
+                                        </fieldset>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form-control">
+                                <fieldset>
+                                    <legend>
+                                        <label for="description">Description: </label>
+                                    </legend>
+                                    <textarea name="description" id="description" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</textarea>
+                                </fieldset>
+                            </div>
+                            <input type="submit" value="Edit Room" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock content %}

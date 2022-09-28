@@ -1,0 +1,141 @@
+{% extends './base.html' %}
+{% block page_title %} {{title }} {% endblock page_title %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="container">
+                <div class="flex-item">
+                    <h3>Filter meetings:</h3>
+                </div>
+                <div class="flex-item form-control">
+                    <select name="room" id="room">
+                        <option value="">Choose which room</option>
+                        <option value="Room1">Room 1</option>
+                        <option value="Room2">Room 2</option>
+                        <option value="Room3">Room 3</option>
+                    </select>
+                </div>
+                <div class="flex-item form-control">
+                    <select name="date" id="date">
+                        <option value="">Date which meeting will be held</option>
+                        <option value="2019-01-01">2019-01-01</option>
+                        <option value="2019-01-02">2019-01-02</option>
+                        <option value="2019-01-03">2019-01-03</option>
+                    </select>
+                </div>
+                <div class="flex-item form-control">
+                    <input type="text" placeholder="Search by attendacen name, responsible etc ... ">
+                </div>
+                <div class="flex-item">
+                    <button class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex-item form-control">
+                    <select name="sortby" id="sortby">
+                        <option value="no">Sort by</option>
+                        <option value="attendance">Attendance - High to Low</option>
+                        <option value="attendance">Attendance - Low to High</option>
+                        <option value="date">Date - Newest to Oldest</option>
+                        <option value="date">Date - Oldest to Newest</option>
+                        <option value="datecreatednewest">Date Created - Newest</option>
+                        <option value="datecreatedoldest">Date Created - Oldest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container">
+                <div class="flex-item">
+                    <h3>Upcoming meetings</h3>
+                    <p>
+                        Your upcoming meetings in this week are shown below:
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p class="room-details" style="font-size: 0.95rem;" data-value="Details and comments about the room."><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <p>January 12 2022</p>
+                </div>
+                <div class="card-info">
+                    <p class="text-title">Meeting about add new developer to the team. </p>
+                    <p class="text-body">Address: Dow Jones Ave. <br /> Building 104 <br /> Floor: 1</p>
+                    <p><a href="#">Conference room</a></p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+   {% endblock content %}

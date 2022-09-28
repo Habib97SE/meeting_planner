@@ -1,0 +1,44 @@
+{% extends './base.html' %}
+{% block page_title %}{{ title }}{% endblock page_title %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item">
+                        <h3>Rooms: </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item">
+                        <table class="table__list">
+                            <thead>
+                                <tr>
+                                    <th>Room name</th>
+                                    <th>Room capacity</th>
+                                    <th>Room location</th>
+                                    <th>Room equipment</th>
+                                    <th>comment</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for room in rooms %}
+                                <tr>
+                                    <td>{{ room.name }}</td>
+                                    <td>{{ room.capacity }}</td>
+                                    <td>{{ room.location }}</td>
+                                    <td>{{ room.equipment }}</td>
+                                    <td>{{ room.comment }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock content %}

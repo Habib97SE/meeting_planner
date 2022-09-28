@@ -1,0 +1,35 @@
+{% extends './base.html' %}
+{% block page_title %} {{ title }} {% endblock page_title %}
+{% block content %}
+
+<main>
+        <section id="deletemeeting__content">
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item">
+                        <h1>Delete meeting</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="flex-item" id="deletemeeting__list">
+                        <h3>- Meeting details:</h3>
+                        <ul>
+                            <li>Room: {{ meeting.room }}</li>
+                            <li>Date: {{ meeting.date }}</li>
+                            <li>Time: {{ meeting.time }}</li>
+                            <li>Participants: {{ meeting.participants }}</li>
+                        </ul>
+                    </div>
+                    <div class="flex-item">
+                        <h3>Are you sure you want to delete this meeting?</h3>
+                        <button class="btn btn-danger" id="deletemeeting__confirm__button">Yes</button>
+                        <button class="btn btn-primary">No</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock content %}

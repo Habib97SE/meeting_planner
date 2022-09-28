@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" , value="{{ meta_keyword }}">
+    <meta name="description" , value="{{ meta_description }}">
+    <title>{% block page_title %}{% endblock page_title %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="flex-item">
+                <div class="logo">
+                    <h1><a href="{% url 'homepage' %}">Meeting Planner</a></h1>
+                </div>
+            </div>
+            <div class="flex-item">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="{% url 'homepage' %}">Home</a></li>
+                        <li class="sub-menu">Meetings
+                            <ul>
+                                <li><a href="{% url 'show_meetings' %}">Show meetings</a></li>
+                                <li><a href="{% url 'new_meeting' %}">Add meeting</a></li>
+                                <li><a href="{% url 'edit_meeting' %}">Edit meeting</a></li>
+                                <li class="danger-item"><a href="{% url 'delete_meeting' %}">Delete meeting</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">Rooms
+                            <ul>
+                                <li><a href="show_rooms">Show rooms</a></li>
+                                <li><a href="new_room">Add room</a></li>
+                                <li><a href="edit_room">Edit room</a></li>
+                                <li class="danger-item"><a href="delete_room">Delete room</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock content %}
+
+<footer>
+        <div class="container">
+            <div class="flex-item">
+                <p>© 2022 - All rights reserved</p>
+            </div>
+            <div class="flex-item footer-menu">
+                <ul>
+                    <li><a href="{% url 'terms' %}">Terms of use</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="../../../static/template/report.html">Report an issue</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+{% extends './base.html' %}
+
+{% block page_title %} {{ title }} {% endblock page_title %}
+
+{% block content %}
+
+<main>
+        <section>
+            <div class="container">
+                <div class="flex-item">
+                    <h3>Filter your meetings</h3>
+                </div>
+                <div class="flex-item form-control">
+                    <select name="room" id="room">
+                        <option value="Room1">Room 1</option>
+                        <option value="Room2">Room 2</option>
+                        <option value="Room3">Room 3</option>
+                    </select>
+                </div>
+                <div class="flex-item form-control">
+                    <select name="date" id="date">
+                        <option value="date1">Date 1</option>
+                        <option value="date2">Date 2</option>
+                        <option value="date3">Date 3</option>
+                    </select>
+                </div>
+                <div class="flex-item form-control">
+                    <select name="time" id="time">
+                        <option value="time1">Time 1</option>
+                        <option value="time2">Time 2</option>
+                        <option value="time3">Time 3</option>
+                    </select>
+                </div>
+                <div class="flex-item form-control">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="flex-item">
+                    <h3>Meetings</h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="flex-item">
+                    <table class="table__list">
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Participants</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for meeting in meetings %}
+                            <tr>
+                                <td>{{ meeting.room }}</td>
+                                <td>{{ meeting.date }}</td>
+                                <td>{{ meeting.time }}</td>
+                                <td>{{ meeting.participants }}</td>
+                                <td>
+                                    <a href="{% url 'meetings:edit' meeting.id %}" class="btn btn-primary">Edit</a>
+                                    <a href="{% url 'meetings:delete' meeting.id %}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock content %}
